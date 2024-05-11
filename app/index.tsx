@@ -11,7 +11,7 @@ import CustomButton from "@/components/CustomButton";
 const App = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
-      <ScrollView contentContainerStyle={{ }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="w-full justify-center items-center min-h-[85vh] px-4">
           <Image
             source={images.logo}
