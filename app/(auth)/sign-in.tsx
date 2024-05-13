@@ -5,6 +5,7 @@ import { images } from "../../constants";
 import FormField from "@/components/FormField";
 import { Link } from "expo-router";
 import CustomButton from "@/components/CustomButton";
+import { createUser } from "@/lib/appwrite"
 
 const SignIn = () => {
   const [isSubmitting, setSubmitting] = useState(false);
@@ -14,25 +15,7 @@ const SignIn = () => {
   });
 
   const submit = async () => {
-    // if (form.email === "" || form.password === "") {
-    //   Alert.alert("Error", "Please fill in all fields");
-    // }
-
-    // setSubmitting(true);
-
-    // try {
-    //   await signIn(form.email, form.password);
-    //   const result = await getCurrentUser();
-    //   setUser(result);
-    //   setIsLogged(true);
-
-    //   Alert.alert("Success", "User signed in successfully");
-    //   router.replace("/home");
-    // } catch (error) {
-    //   Alert.alert("Error", error.message);
-    // } finally {
-    //   setSubmitting(false);
-    // }
+    createUser();
   };
 
   return (
